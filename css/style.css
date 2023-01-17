@@ -1,12 +1,12 @@
 .qubit {
-    padding: 58px 0 40px;
+    padding: 58px 0 60px;
     text-align: center;
 }
 
 .qubit__title {
-    margin-bottom: 22px;
     font-size: 40px;
     line-height: 45px;
+    margin-bottom: 22px;
 }
 
 .qubit__span {
@@ -15,28 +15,24 @@
 }
 
 .qubit__items {
-    margin-top: 52px;
+    margin-top: 43px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .qubit-card {
-    max-width: 320px;
     padding: 0 2px 18px 2px;
+    max-width: 320px;
     transition: 0.2s linear all;
     cursor: pointer;
-    transform-origin: top left;
-}
-
-.qubit-card:hover {
-    background: #F6F6F6;
-    transform: scale(1.1);
 }
 
 .qubit-card__title {
-    margin: 35px 0 15px;
     font-size: 19px;
     line-height: 23px;
+    margin: 45px 0 15px;
 }
 
 .qubit-card__descr {
@@ -44,38 +40,42 @@
     line-height: 15px;
 }
 
+.qubit-card:hover {
+    background-color: #F6F6F6;
+}
+
+.qubit-card__icon {
+    transition: 0.2s linear all;
+}
+
+.qubit-card:hover .qubit-card__icon {
+    transform: scale(1.2);
+}
+
 .trusted {
     padding: 60px 0 65px;
-    background: #17002E;
+    background-color: #17002E;
+    color: white;
 }
 
 .trusted__title {
-    color: white;
+    text-align: center;
     font-size: 40px;
     line-height: 45px;
-    text-align: center;
 }
 
 .trusted__items {
-    margin-top: 50px;
+    margin-top: 65px;
     display: flex;
     justify-content: space-between;
 }
 
-.trusted__item {
-    width: 350px;
+.trusted-card {
+    flex: 0 1 350px;
     cursor: pointer;
 }
 
-.trusted__item .item__photo img {
-    transition: all 0.3s linear;
-}
-
-.trusted__item:hover .item__photo img {
-    transform: scale(1.5);
-}
-
-.item__photo {
+.trusted-card__photo {
     background: no-repeat url('../images/girl.jpg');
     background-size: cover;
     height: 205px;
@@ -85,20 +85,31 @@
     border-radius: 7px 7px 0px 0px;
 }
 
-.item__descr {
-    background-color: white;
+.trusted-card__content {
     padding: 25px 0 60px;
-    text-align: center;
-    box-shadow: 0px 2px 4px rgba(192, 192, 192, 0.5);
+    background-color: white;
     border-radius: 0px 0px 7px 7px;
+    text-align: center;
 }
 
-.descr {
+.trusted-card__link {
     display: block;
     margin: 25px auto 0;
-    max-width: 220px;
+    width: 220px;
     font-size: 18px;
     line-height: 22px;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.trusted-card__photo img {
+    transition: all 0.2s linear;
+}
+
+.trusted-card:hover .trusted-card__photo img {
+    transform: scale(1.5);
+}
+
+.trusted-card:hover .trusted-card__link {
+    text-decoration: underline;
 }
